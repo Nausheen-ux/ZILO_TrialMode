@@ -1,6 +1,7 @@
 # ZILO_TrialMode
 <img width="650" height="858" alt="image" src="https://github.com/user-attachments/assets/8714d5dd-8e24-4bbe-ac38-ee7ed2d76bcf" />
-<img width="650" height="858" alt="Screenshot 2026-04-26 042237" src="https://github.com/user-attachments/assets/3af69dcb-9daa-4113-b1b8-ea50799ee744" />
+<img width="872" height="862" alt="Screenshot 2026-04-26 042201" src="https://github.com/user-attachments/assets/62a65086-fc42-4961-a4d1-0511179b19d1" />
+
 
 **A working prototype built for ZILO's open Product Engineering role.**
  
