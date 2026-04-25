@@ -1,0 +1,337 @@
+.trial-flow {
+  min-height: 100vh;
+  background: var(--zilo-cream);
+  padding: 24px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.tf-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.zilo-logo-sm {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--zilo-black);
+}
+
+.tf-timer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--zilo-black);
+  background: var(--zilo-white);
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1.5px solid var(--zilo-light-grey);
+  transition: all 0.3s ease;
+}
+
+.tf-timer.urgent {
+  color: var(--zilo-coral);
+  border-color: var(--zilo-coral);
+  background: rgba(232, 112, 90, 0.06);
+}
+
+.timer-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--zilo-green-dark);
+  animation: pulse 1.5s ease infinite;
+}
+
+.tf-timer.urgent .timer-dot {
+  background: var(--zilo-coral);
+}
+
+.tf-progress-wrap {
+  margin-bottom: 20px;
+}
+
+.tf-progress-bar {
+  height: 3px;
+  background: var(--zilo-light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.tf-progress-fill {
+  height: 100%;
+  background: var(--zilo-black);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.tf-progress-label {
+  font-size: 12px;
+  color: var(--zilo-grey);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Item card */
+.tf-item-card {
+  background: var(--zilo-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tf-item-card.exit {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.tf-item-card.enter {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tf-item-image-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.tf-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tf-item-num-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.5px;
+}
+
+.tf-item-info {
+  padding: 18px 20px 20px;
+}
+
+.tf-brand {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--zilo-grey);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.tf-item-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--zilo-black);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+.tf-item-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tf-tag {
+  font-size: 12px;
+  color: var(--zilo-grey);
+  background: var(--zilo-cream);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.tf-price {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--zilo-black);
+}
+
+/* Actions */
+.tf-actions {
+  margin-bottom: 16px;
+}
+
+.tf-action-label {
+  text-align: center;
+  font-size: 13px;
+  color: var(--zilo-grey);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.tf-btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 12px;
+}
+
+.tf-btn {
+  padding: 18px 16px;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  letter-spacing: -0.2px;
+}
+
+.tf-btn-icon {
+  font-size: 18px;
+}
+
+.tf-btn-return {
+  background: var(--zilo-white);
+  color: var(--zilo-black);
+  border: 1.5px solid var(--zilo-light-grey);
+}
+
+.tf-btn-return:hover {
+  border-color: var(--zilo-coral);
+  color: var(--zilo-coral);
+  background: rgba(232, 112, 90, 0.05);
+}
+
+.tf-btn-keep {
+  background: var(--zilo-black);
+  color: var(--zilo-white);
+}
+
+.tf-btn-keep:hover {
+  background: var(--zilo-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(45, 90, 39, 0.25);
+}
+
+/* Return reasons */
+.tf-reasons {
+  margin-bottom: 16px;
+}
+
+.tf-reasons-label {
+  font-size: 13px;
+  color: var(--zilo-grey);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.tf-reasons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tf-reason-btn {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--zilo-white);
+  border: 1.5px solid var(--zilo-light-grey);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--zilo-black);
+  text-align: left;
+  transition: all 0.18s ease;
+  animation: slideIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+.tf-reason-btn:hover {
+  border-color: var(--zilo-black);
+  background: var(--zilo-black);
+  color: var(--zilo-white);
+}
+
+.tf-back-btn {
+  font-size: 13px;
+  color: var(--zilo-grey);
+  background: none;
+  padding: 6px 0;
+  font-family: var(--font-body);
+}
+
+.tf-back-btn:hover {
+  color: var(--zilo-black);
+}
+
+/* Decided strip */
+.tf-decided-strip {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  flex-wrap: wrap;
+}
+
+.tf-decided-thumb {
+  width: 44px;
+  height: 52px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 0.85;
+}
+
+.tf-decided-thumb.keep {
+  outline: 2px solid var(--zilo-green-dark);
+}
+
+.tf-decided-thumb.return {
+  outline: 2px solid var(--zilo-coral);
+  opacity: 0.5;
+}
+
+.tf-decided-icon {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: white;
+}
+
+.tf-decided-thumb.keep .tf-decided-icon {
+  background: var(--zilo-green-dark);
+}
+
+.tf-decided-thumb.return .tf-decided-icon {
+  background: var(--zilo-coral);
+}
